@@ -16,17 +16,17 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {  //공연 기획자의 역할 외부에서 주입
     @Bean
     public MemberService memberService() {
-        return new MemberServiceImpl(membeerRepository());
+        return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
-    public static MemoryMemberRepository membeerRepository() {
+    public static MemoryMemberRepository memberRepository() {
         return new MemoryMemberRepository();
     }
 
     @Bean
     public OrderService orderService() {
-        return new OrderServiceImpl(membeerRepository(), discountPolicy());
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
     @Bean
