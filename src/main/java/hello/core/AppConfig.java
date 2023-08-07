@@ -32,7 +32,8 @@ public class AppConfig {  //공연 기획자의 역할 외부에서 주입
     @Bean
     public OrderService orderService() {
 //        System.out.println("call AppConfig.orderService");
-        return new OrderServiceImpl(memberRepository(), discountPolicy());
+//        return new OrderServiceImpl(memberRepository(), discountPolicy());
+        return null;
     }
 
     @Bean
