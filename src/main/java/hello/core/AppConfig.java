@@ -19,19 +19,19 @@ public class AppConfig {  //공연 기획자의 역할 외부에서 주입
     //@Bean orderService-> new MemoryMemberRepository()
     @Bean
     public MemberService memberService() {
-        System.out.println("call AppConfig.memberService");
+//        System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
     public MemoryMemberRepository memberRepository() {
-        System.out.println("call AppConfig.memberRepository");
+//        System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
 
     @Bean
     public OrderService orderService() {
-        System.out.println("call AppConfig.orderService");
+//        System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
